@@ -15,9 +15,9 @@ gems: [jekyll-paginate]
 # SNS settings
 RSS: false
 
-zhihu_username:     Zhang He
+zhihu_username:     WinCoder
 github_username:    herzhang
-facebook_username:  He Zhang
+facebook_username:  he.zhang.1238
 weibo_username:     3919779661
 #twitter_username:  huxpro
 
