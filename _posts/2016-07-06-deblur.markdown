@@ -1,0 +1,106 @@
+##引言
+这是图像去模糊的第三篇，接着上节说道逆滤波对噪声特别敏感。约束最小二乘方滤波（Constrained Least Squares Filtering，aka Tikhonov filtration,Tikhonov regularization）核心是H对噪声的敏感性问题。减少噪声敏感新问题的一种方法是以平滑度量的最佳复原为基础的，因此我们可以建立下列约束条件：
+$$C = \sum\limits_0^{M - 1} {\sum\limits_0^{N - 1} {{{[{\nabla ^2}f(x,y)]}^2}} }  \quad(1)$$
+其约束条件为
+$$||G - H\hat F|{|_2^2} = ||N |{|_2^2}\quad(2)$$
+这里，$\hat F$是为退化图像的估计，拉普拉斯算子$\nabla ^2$在这里表示平滑程度。
+##推导
+如何求解这个式子呢，将上式表示成矩阵形式，同时将约束项转换成拉格朗日乘子项，可得到
+$$||P \hat F||_2^2 - \lambda (||G - H \hat F||_2^2 - ||N||_2^2)\quad(3)$$
+最小化上代价函数，对$ \hat F$求导，令等零。
+$${P^ * }P \hat F = \lambda {H^ * }(G - H \hat F)\quad(4)$$
+最后可得到，下列式子
+$$\hat F = \frac{{\lambda {H^ * }G}}{{\lambda {H^ * }H + {P^ * }P}} = \left[ {\frac{{{H^*}}}{{||H||_2^2 + \gamma ||P||_2^2}}} \right]G\quad(5)$$
+这里，$P$是函数
+$$p = \left[ {\begin{array}{*{20}{c}}
+0&{ - 1}&0\\
+{ - 1}&4&{ - 1}\\
+0&{ - 1}&0
+\end{array}} \right]\quad(6)$$
+的傅里叶变换。其实这就是那个拉普拉斯模板嘛。
+嗯，和书上的公式一模一样，这就证明我们求解对了。
+好了，我又可以重新造轮子了。
+##代码
+
+```
+close all;
+clear all;
+clc;
+% Display the original image.
+I = im2double(imread('lena.jpg'));
+[hei,wid,~] = size(I);
+subplot(2,3,1),imshow(I);
+title('Original Image (courtesy of MIT)');
+
+
+% Simulate a motion blur.
+LEN = 21;
+THETA = 11;
+PSF = fspecial('motion', LEN, THETA);
+blurred = imfilter(I, PSF, 'conv', 'circular');
+subplot(2,3,2), imshow(blurred); title('Blurred Image');
+
+% Inverse filter
+If = fft2(blurred);
+Pf = psf2otf(PSF,[hei,wid]);
+deblurred = ifft2(If./Pf);
+subplot(2,3,3), imshow(deblurred); title('Restore Image')
+
+% Simulate additive noise.
+noise_mean = 0;
+noise_var = 0.00001;
+blurred_noisy = imnoise(blurred, 'gaussian', ...
+                        noise_mean, noise_var);
+subplot(2,3,4), imshow(blurred_noisy)
+title('Simulate Blur and Noise')
+
+% Try restoration using  Home Made Constrained Least Squares Filtering.
+p = [0 -1 0;-1 4 -1;0 -1 0];
+P = psf2otf(p,[hei,wid]);
+
+gama = 0.001;
+If = fft2(blurred_noisy);
+
+numerator = conj(Pf);
+denominator = Pf.^2 + gama*(P.^2);
+
+deblurred2 = ifft2( numerator.*If./ denominator );
+subplot(2,3,5), imshow(deblurred2)
+title('Restoration of Blurred Using Constrained Least Squares Filtering');
+
+subplot(2,3,6); imshow(deconvreg(blurred_noisy, PSF,0)); title('Regul in Matlab');
+```
+依次是原图，运动模糊图像，逆滤波结果，运动模糊+高斯噪声，Home Made 约束最小二乘方滤波（$\gamma =0.001，交互设置$），Matlab自带的去模糊deconvreg函数。
+##效果
+![这里写图片描述](http://img.blog.csdn.net/20150808154921061)
+嗯，可以看出我们做出来的约束最小二乘方滤波效果非常不错的（多亏我调的一手好参）。这里的$\gamma $是我自己手工设置的，也是多次尝试，以产生最好的视觉效果。我个人建议$\gamma $设置成0.001左右会有比较好的效果。一般的说法是，约束最小二乘方滤波对高噪声和中等噪声产生结果要好于维纳滤波，对于低噪声两种滤波产生结果基本相等。手工选取参数时效果会更好一些。
+其实$\gamma $可以迭代最优化，Matlab自带的函数deconvreg即是如此，这样可以实现最佳复原算法，听起来不错。
+##迭代计算$\gamma$
+定义一个“残差”向量$R$为
+$$R = G-H  \hat F\quad(8)$$
+而$\hat F = \left[ {\frac{{{H^*}}}{{||H||_2^2 + \gamma ||P||_2^2}}} \right]G$，我们需要最小化下列代价函数
+$$\phi (\gamma ) = R^TR = ||R||_2^2 = trace(R^TR)\quad(9)$$
+这里我们需要明白的是$R$是向量形式。将(5)式带入(9)中，最后得到
+$$\phi (\gamma ) =  {\frac{ \gamma ^2 ||G||_2^2||P||_2^4}{||H||_2^4 + 2\gamma ||H||_2^2||R||_2^2+\gamma^2||P||_2^4}} (10)$$
+对于这个单变量函数，求其极小值可以借助于matlab的fminbnd函数。
+好了，这个系列已经接近尾声了，可能就不在写了。如果还有疑惑可以看一下matlab中deconvreg.m源文件。
+还有关于实际运用需要估计核PSF，关于PSF的估计可以参看[RESTORATION OF DEFOCUSED AND BLURRED IMAGES](http://yuzhikov.com/articles/BlurredImagesRestoration1.htm)。上述介绍的都是比较传统的方法，关于盲区卷积，可以在网上用谷歌搜索Deblur最近几年发表的文章。
+##效果
+![这里写图片描述](http://img.blog.csdn.net/20150809152518797)
+![这里写图片描述](http://img.blog.csdn.net/20150809152536159)
+![这里写图片描述](http://img.blog.csdn.net/20150809152608017)
+![这里写图片描述](http://img.blog.csdn.net/20150809152627311)
+![这里写图片描述](http://img.blog.csdn.net/20150809152641858)
+![这里写图片描述](http://img.blog.csdn.net/20150809152658939)
+
+
+##更多阅读
+RESTORATION OF DEFOCUSED AND BLURRED IMAGES http://yuzhikov.com/articles/BlurredImagesRestoration1.htm 
+图像去模糊 （维纳滤波）http://blog.csdn.net/bluecol/article/details/46242355
+图像去模糊（逆滤波）http://blog.csdn.net/bluecol/article/details/47357717
+数字图像处理（第三版） 冈萨雷斯著 chapter 5，图像复原与重建
+MathLab  source code, deconvreg.m
+## Licenses
+| 作者 	| 日期 	| 联系方式|
+| ------------- |:-------------:| -----:|
+| 风吹夏天  | 2015年8月8日 | wincoder@qq.com|
