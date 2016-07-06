@@ -2,8 +2,8 @@
 layout:     post
 title:      "我的独立博客"
 subtitle:   "第一篇"
-date:       2016-03-02 12:00:00
-author:     "Candycat"
+date:       2016-07-06 22:30:00
+author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
 tags:
     - 闲谈
@@ -11,16 +11,18 @@ tags:
 
 ## 写在前面
 
-昨天突然又萌生出建一个自己博客的想法（其实我是为了有个专门的地方能够放一些简历、项目资料的地方…）。Github Pages很早就建了，只是一直没有管，一直停留在“Hello World”的阶段。昨天偶然去知乎上看到了一个问题，就在[博主Hux的模板](http://huangxuan.me/)上改了改，拿来用一下当自己的博客模板了。
+今天突然又萌生出建一个自己博客的想法（其实这个想法早就有之，主要是为了放一些个人简历、项目的地方…）。虽然自己是软件工程科班出身，做过些ASP.NET，JSP等网站的项目，但是都未曾托管到服务器上，所以始终没有自己独立博客，怀有遗憾。到了研究生阶段，有一段时间闲暇想去弄个人博客，考虑到Java和C#语言都比较大，维护起来麻烦，所以就选了Python。
+但是那时候也没有遇到合适的模板，所以一直停留在“Hello World”的阶段。昨天偶然在CSDN上看到了冯乐乐女神自己建立了一个独立的[博客](http://candycat1992.github.io/)，我就在她的模板基础上改了改，也拿来用一下当自己的博客模板了，^~^。
 
-想要自己建博客的想法萌生于一两年前，有个IBM的管理人员来交大做讲座，他提到面试的时候如果有个个人博客是很好的事情，但千万不要使用CSDN这种，显得很low（这话不是我说的，不要拍我……）。作为一个使用CDSN博客多年的人来说，我受到了1t的伤害>_<。最近又来了兴趣，所幸花一天时间搞起来吧。
+大概从早上到晚上花费了一天功夫搭建起来了，上午看了些阮一峰等人的博客，基本可以搭建起来一个“Hello World”, 下午看了点git的基本用法，配合已有的模板，修改起来也很快的。
 
 ## 如果你也想搭建自己的博客
 
-如果你也想自己搭建一个个人博客，我可以列举一些链接：
+如果你也想自己搭建一个个人博客，这里有一些我参考网页链接：
 
-* http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/
-* https://github.com/huxpro/huxpro.github.io/
+* [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
+* [Jekyll模板](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
+* [黄玄的博客源码]https://github.com/huxpro/huxpro.github.io/
 
 整个过程都比较简单，作为web小白的我就可以建出来，相信对你也不是难事！
 
