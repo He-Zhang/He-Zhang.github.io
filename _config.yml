@@ -65,7 +65,7 @@ ba_track_id: 207a182a0a79e8a76bfd02381045166f
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "计算机视觉与图像方向在校学生，爱好摄影与动漫，喜欢用计算机来编写有趣的程序，相信技术能改变世界。"
+sidebar-about-description: "计算机视觉与图像处理方向在校学生，摄影与动漫爱好者，喜欢用计算机来编写有趣的程序，相信技术能改变世界。"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
