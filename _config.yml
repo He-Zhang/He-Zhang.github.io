@@ -17,7 +17,7 @@ RSS: false
 
 zhihu_username:     WinCoder
 github_username:    herzhang
-facebook_username:  he.zhang.1238
+facebook_username:  hezhang91
 weibo_username:     3919779661
 #twitter_username:  huxpro
 
@@ -79,17 +79,17 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Iq Blog",
-        href: "http://www.iquilezles.org/www/index.htm"
+        title: "candycat",
+        href: "http://candycat1992.github.io/"
     },{
-        title: "Aras Blog",
-        href: "http://aras-p.info/blog/"
+        title: "阿毛的蛋疼地",
+        href: "http://xiangwangfeng.com/"
     },{
-        title: "Scrawk Blog",
-        href: "http://scrawkblog.com/"
+        title: "人在旅途的Blog",
+        href: "http://www.cnblogs.com/Imageshop/"
     },{
-        title: "雨松MOMO的Blog",
-        href: "http://www.xuanyusong.com/"
+        title: "何恺明的主页",
+        href: "http://kaiminghe.com/"
     },{
         title: "云风的Blog",
         href: "http://blog.codingnow.com/"
