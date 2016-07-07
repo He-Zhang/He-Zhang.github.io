@@ -3,7 +3,7 @@ layout:     post
 title:      "Graphics Hardware - Buffers and Buffering"
 subtitle:   "Real-Time Rendering"
 date:       2016-04-28 13:00:00
-author:     "Candycat"
+author:     "Wincoder"
 header-img: "img/in-post/graphics-hardware-bg.jpg"
 tags:
     - Graphics Hardware
