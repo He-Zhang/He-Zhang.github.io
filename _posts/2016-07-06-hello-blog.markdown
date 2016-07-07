@@ -22,7 +22,7 @@ tags:
 
 * [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
 * [Jekyll模板](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
-* [黄玄的博客源码]https://github.com/huxpro/huxpro.github.io/
+* [黄玄的博客源码](https://github.com/huxpro/huxpro.github.io/)
 
 整个过程都比较简单，作为web小白的我就可以建出来，相信对你也不是难事！
 
