@@ -3,7 +3,7 @@ layout:     post
 title:      "Diablo的特效实现"
 subtitle:   "Game Art Tricks"
 date:       2016-06-25 00:00:01
-author:     "Candycat"
+author:     "Wincoder"
 header-img: "img/in-post/diablo-3.jpeg"
 tags:
     - Game Art Tricks
