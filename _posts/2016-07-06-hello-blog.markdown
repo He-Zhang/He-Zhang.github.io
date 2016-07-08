@@ -20,7 +20,7 @@ tags:
 
 如果你也想自己搭建一个个人博客，这里有一些我参考网页链接：
 
-* [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
+* [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
 * [Jekyll模板](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/)
 * [黄玄的博客源码](https://github.com/huxpro/huxpro.github.io/)
 
