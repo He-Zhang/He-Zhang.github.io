@@ -45,6 +45,6 @@ Yoav Y.Schechner [http://webee.technion.ac.il/~yoav/research/instant-dehazing.ht
 
 12. Johannes Kopf [http://johanneskopf.de/publications/deep_photo/index.html](http://johanneskopf.de/publications/deep_photo/index.html "Deep photo")
 
-13. S.G. Narasimhan and S.K. Nayar[http://www.cs.columbia.edu/CAVE/software/wild/publications.php](http://www.cs.columbia.edu/CAVE/software/wild/publications.php "Interactive deweathering")
+13. S.G. Narasimhan and S.K. Nayar [http://www.cs.columbia.edu/CAVE/software/wild/publications.php](http://www.cs.columbia.edu/CAVE/software/wild/publications.php "Interactive deweathering")
 
 14. Shai Avidan[http://www.eng.tau.ac.il/~avidan/](http://www.eng.tau.ac.il/~avidan/)
