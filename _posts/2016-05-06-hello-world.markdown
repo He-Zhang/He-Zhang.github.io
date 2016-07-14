@@ -1,10 +1,11 @@
 ---
 layout:     post
 title:      "我的独立博客"
-subtitle:   "第一篇"
+subtitle:   "第二篇"
 date:       2016-07-06 22:30:00
 author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
+catalog: true
 tags:
     - HTML
 ---
