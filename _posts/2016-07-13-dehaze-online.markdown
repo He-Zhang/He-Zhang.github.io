@@ -47,4 +47,4 @@ Yoav Y.Schechner [http://webee.technion.ac.il/~yoav/research/instant-dehazing.ht
 
 13. S.G. Narasimhan and S.K. Nayar[http://www.cs.columbia.edu/CAVE/software/wild/publications.php](http://www.cs.columbia.edu/CAVE/software/wild/publications.php "Interactive deweathering")
 
-14. Shai Avidan[[http://www.eng.tau.ac.il/~avidan/](http://www.eng.tau.ac.il/~avidan/)]
+14. Shai Avidan[http://www.eng.tau.ac.il/~avidan/](http://www.eng.tau.ac.il/~avidan/)
