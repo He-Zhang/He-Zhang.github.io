@@ -6,10 +6,8 @@ date:       2016-07-06 22:30:00
 author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
 tags:
-    - 闲谈
+    - HTML
     - 知乎
-    - MIUI
-    - Android
 ---
 
 ## 写在前面
