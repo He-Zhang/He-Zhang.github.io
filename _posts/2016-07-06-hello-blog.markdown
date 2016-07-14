@@ -7,6 +7,9 @@ author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
 tags:
     - 闲谈
+    - 知乎
+    - MIUI
+    - Android
 ---
 
 ## 写在前面
