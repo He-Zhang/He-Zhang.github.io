@@ -17,7 +17,7 @@ Robby Tan [http://php-robbytan.rhcloud.com/fog/index.html](http://php-robbytan.r
 Raanan Fattal [http://www.cs.huji.ac.il/~raananf/projects/dehaze_cl/](http://www.cs.huji.ac.il/~raananf/projects/dehaze_cl/ "Fattal") 
 
 3. 
-He Kaiming [http://www.cs.huji.ac.il/~raananf/projects/dehaze_cl/](http://www.cs.huji.ac.il/~raananf/projects/dehaze_cl/ "He Kaiming")
+He Kaiming [http://kaiminghe.com/cvpr09/index.html "He Kaiming")
 
 4. 
 Meng Gaofeng [http://www.escience.cn/people/menggaofeng/research.html](http://www.escience.cn/people/menggaofeng/research.html "Meng")
