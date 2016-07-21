@@ -15,4 +15,3 @@ tags:
 ```
  \usepackage[justification=centering]{caption}
 ```
-2. 
