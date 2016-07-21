@@ -1,0 +1,18 @@
+---
+layout:     post
+title:      "反人类的Latex"
+subtitle:   "常用命令"
+date:       2016-07-17 20:54:00
+author:     "Wincoder"
+header-img: "img/in-post/default-bg.jpg"
+tags:
+    - 科研
+
+---
+
+1. 如何让figure的标题居中
+
+```
+ \usepackage[justification=centering]{caption}
+```
+2. 
