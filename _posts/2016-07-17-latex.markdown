@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "反人类的Latex"
-subtitle:   "常用命令"
+subtitle:   "持续更新"
 date:       2016-07-17 20:54:00
 author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
@@ -10,8 +10,20 @@ tags:
 
 ---
 
-1. 如何让figure的标题居中
+- 如何让figure的标题居中
 
 ```
  \usepackage[justification=centering]{caption}
+```
+
+-  这条命令使 text 叁数中的多个单词组成的字符串在任何倩况下都不会分开在两行中
+
+```
+The \mbox command creates a box just wide enough to hold the text created by its argument.
+```
+
+- 致谢Acknowledgments用什么命令生成，前面不加标号
+
+```
+\section*{Acknowledgement}
 ```
