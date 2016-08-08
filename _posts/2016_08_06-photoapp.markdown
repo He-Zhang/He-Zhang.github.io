@@ -2,7 +2,7 @@
 layout:     post
 title:      "图片狂欢"
 subtitle:   "谈一谈修图软件"
-date:       2016-07-06 22:30:00
+date:       2016-08-06 22:30:00
 author:     "Wincoder"
 header-img: "img/in-post/default-bg.jpg"
 tags:
